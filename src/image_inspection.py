@@ -25,12 +25,6 @@ plt.title("Original Image")
 plt.axis("off")
 plt.show()
 
-gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-plt.imshow(gray_image, cmap="gray")
-plt.title("Grayscale Image")
-plt.axis("off")
-plt.show()
-
 resized_image = cv2.resize(
     image,
     (640, 480),
@@ -40,6 +34,18 @@ resized_rgb = cv2.cvtColor(resized_image, cv2.COLOR_BGR2RGB)
 print("Resized shape:", resized_image.shape)
 plt.imshow(resized_rgb)
 plt.title("Resized Image")
+plt.axis("off")
+plt.show()
+
+gray_image = cv2.cvtColor(resized_image, cv2.COLOR_BGR2GRAY)
+plt.imshow(gray_image, cmap="gray")
+plt.title("Grayscale Image")
+plt.axis("off")
+plt.show()
+
+blur_image=cv2.GaussianBlur(gray_image,(7,7),0)
+plt.imshow(blur_image,cmap="gray")
+plt.title("Gaussian image")
 plt.axis("off")
 plt.show()
 
