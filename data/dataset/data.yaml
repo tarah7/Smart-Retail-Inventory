@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 11
+names: ['-', '- Big Bottle', '- Big Box', '- Box', '- Bread', '- Can', '- Pack', '- Snack', '- Vegetable', '- Vegetable 2', 'Bottle']
+
+roboflow:
+  workspace: kickkung
+  project: shelf-detection-for-coco-format
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/kickkung/shelf-detection-for-coco-format/dataset/2
